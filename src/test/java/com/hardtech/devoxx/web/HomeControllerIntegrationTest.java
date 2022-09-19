@@ -9,12 +9,14 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 class HomeControllerIntegrationTest {
 
 
-    private int port = 8080;
+    private final int port = 8080;
+    String url = "http://localhost:" + port + "/";
 
     @Test
-    void runAndInvokeHome(){
-        String url = "http://localhost:" + port + "/";
+    void runAndInvokeHome() {
+
         String body = new TestRestTemplate("user", "user").getForObject(url, String.class);
         System.out.println(body);
     }
+
 }
