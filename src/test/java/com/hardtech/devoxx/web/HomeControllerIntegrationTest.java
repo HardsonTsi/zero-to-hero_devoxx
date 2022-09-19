@@ -2,6 +2,7 @@ package com.hardtech.devoxx.web;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.web.client.RestTemplate;
 
 
@@ -14,7 +15,7 @@ class HomeControllerIntegrationTest {
     @Test
     void runAndInvokeHome(){
         String url = "http://localhost:" + port + "/";
-        String body = new RestTemplate().getForObject(url, String.class);
+        String body = new TestRestTemplate("user", "user").getForObject(url, String.class);
         System.out.println(body);
     }
 }
