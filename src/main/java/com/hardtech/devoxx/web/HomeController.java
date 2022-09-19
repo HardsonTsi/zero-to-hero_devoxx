@@ -11,8 +11,8 @@ public class HomeController {
     @Value("${conference.name:devoxx}")
     private String conference;
 
-    @RequestMapping("/")
     @Secured("ROLE_HERO")
+    @RequestMapping("/")
     public String hello() {
         return "Hello " + conference;
     }
