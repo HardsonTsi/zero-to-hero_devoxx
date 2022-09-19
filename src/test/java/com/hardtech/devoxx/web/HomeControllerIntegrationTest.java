@@ -3,7 +3,6 @@ package com.hardtech.devoxx.web;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.web.client.RestTemplate;
 
 
 @SpringBootTest
