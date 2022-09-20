@@ -19,4 +19,5 @@ class SpeakerRepositoryTest {
         System.out.println(speakerRepository.findByTwitter("dave_syer").getTwitter());
     }
 
+
 }
